@@ -1,0 +1,10 @@
+# BaseOS 版本定义 [BaseOS 应用名, 版本号, 镜像公网地址]
+Dependency:
+  AnolisOS:
+    Anolis8:
+      8.6: &AnolisOS8.6 [anolisos, 8.6, openanolis/anolisos:8.6]
+      8.8: &AnolisOS8.8 [anolisos, 8.8, openanolis/anolisos:8.8]
+    Anolis23:
+      23: &AnolisOS23 [anolisos, 23, openanolis/anolisos:23]
+  Alinux:
+    3: &Alinux3 [ alinux, 3, alibaba-cloud-linux-3-registry.cn-hangzhou.cr.aliyuncs.com/alinux3/alinux3 ]

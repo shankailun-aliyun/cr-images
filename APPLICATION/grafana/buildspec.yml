@@ -1,0 +1,30 @@
+name: &NAME
+version: &VERSION
+image_type: &IMAGE_TYPE
+baseos_version: &BASEOS_VERSION
+
+# 定义镜像仓库信息
+repository_info:
+  dockerhub: &DOCKERHUB_PROD
+  acr: &ACR_PROD
+
+# 定义镜像测试信息
+t-one:
+  # 配置测试信息 workspace 和模版
+  workspace: &WORKSPACE platform_test
+  template: &TEMPLATE create_job_template
+
+# 构建镜像配置
+images:
+	# # 分组名称，支持自定义
+  BuildGrafanaECSApplicationDockerImage:
+  	# 定义是否构建参数
+    build: true
+    docker_file:
+      path: APPLICATION/grafana/7.5.11/8.6/Dockerfile
+      scene:
+        args: []
+        tags: [1.1.1]
+        registry: []
+      # 测试配置
+      test_config: [*WORKSPACE, *TEMPLATE]

@@ -1,0 +1,8 @@
+# 版本关系依赖表，默认继承 version-base.yml 配置，可重写覆盖
+BaseDependency: ../version-base.yml
+Dependency:
+  name: grafana
+  image_type: application
+  versions:
+    7.5.11:
+      baseos_version: *AnolisOS8.6
