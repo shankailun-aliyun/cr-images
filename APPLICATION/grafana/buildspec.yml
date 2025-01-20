@@ -20,6 +20,7 @@ images:
   BuildGrafanaECSApplicationDockerImage:
   	# 定义是否构建参数
     build: true
+    region: cn-hongkong
     docker_file:
       path: APPLICATION/grafana/7.5.11/8.6/Dockerfile
       scene:
